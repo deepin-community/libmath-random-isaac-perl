@@ -1,0 +1,46 @@
+Source: libmath-random-isaac-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Dominic Hargreaves <dom@earth.li>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 11)
+Build-Depends-Indep: perl,
+                     libtest-pod-coverage-perl,
+                     libtest-cpan-meta-perl,
+                     libtest-pod-perl,
+                     libtest-minimumversion-perl,
+                     libtest-portability-files-perl,
+                     libtest-nowarnings-perl,
+                     libstatistics-test-randomwalk-perl,
+                     libtest-without-module-perl,
+                     libtest-distmanifest-perl,
+                     libtest-kwalitee-perl,
+                     libtest-leaktrace-perl
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libmath-random-isaac-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libmath-random-isaac-perl.git
+Homepage: https://metacpan.org/release/Math-Random-ISAAC
+
+Package: libmath-random-isaac-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Recommends: libmath-random-isaac-xs-perl
+Description: Perl interface to the ISAAC PRNG Algorithm
+ Math::Random::ISAAC implements the ISAAC (Indirection, Shift, Accumulate, Add
+ and Count) pseudorandom number generator (PRNG) algorithm described on the
+ project page at: <URL:http://burtleburtle.net/bob/rand/isaac.html>
+ .
+ As with other algorithms like the Mersenne Twister (see Math::Random::MT),
+ this algorithm is designed to take some seed information and produce seemingly
+ random results as output.
+ .
+ The results are uniformly distributed, unbiased, and unpredictable unless you
+ know the seed. The algorithm was published by Bob Jenkins in the late 1990s
+ and despite the best efforts of many security researchers, no feasible attacks
+ have been found to date.
+ .
+ For comparison with other algorithms intended to generate random data, the
+ Mersenne Twister has a period of 2^19937-1, the related TT800 has a period
+ of 2^800-1 values. ISAAC has a period of 2^8295 values on average.
